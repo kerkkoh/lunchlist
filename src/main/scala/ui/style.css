@@ -1,0 +1,102 @@
+@font-face {
+    src: url("TitilliumWeb-Light.ttf");
+}
+@font-face {
+    src: url("JosefinSans-Light.ttf");
+}
+
+Label {
+    -fx-font-family: "Titillium Web";
+    -fx-font-weight: 400;
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+}
+Button {
+    -fx-background-color: rgba(233, 0, 210, 0);
+    -fx-font-family: "Titillium Web";
+    -fx-text-fill: white;
+    -fx-font-size: 23px;
+}
+.btn {
+    -fx-background-color: rgba(233, 0, 210, 0.15);
+}
+.active {
+    -fx-underline: true;
+}
+.btnActive {
+    -fx-background-color: rgba(169, 0, 151, 0.2);
+}
+.highlighted {
+    -fx-text-fill: #ff7bad;
+}
+.restaurantName {
+    -fx-font-weight: 200;
+    -fx-font-size: 17px;
+    -fx-text-fill: #e5d4ff;
+}
+.favoriteRestaurant {
+    -fx-text-fill: #ff7981;
+}
+#title {
+    -fx-font-family: "Josefin Sans";
+    -fx-font-weight: 200;
+    -fx-font-size: 50px;
+}
+#settings {
+    -fx-graphic: url('gear.png');
+    -fx-background-color: transparent;
+}
+
+TextArea {
+    -fx-background-color: rgba(0,0,0,0.5);
+}
+.listbg {
+    -fx-background-color: rgba(97, 0, 128, 0.3);
+}
+.settingsTitle {
+    -fx-font-weight: 200;
+    -fx-font-size: 22px;
+}
+.dropdown, .list-view {
+    -fx-font-weight: 200;
+    -fx-font-size: 20px;
+    -fx-text-fill: white;
+    -fx-background-color: rgba(233, 0, 210, 0.15);
+}
+.combo-box .list-cell, .list-view .list-cell
+{
+    -fx-background: white;
+    -fx-background-color: transparent;
+    -fx-text-fill: rgb(237, 193, 242);
+    -fx-padding: 3 0 2 7;
+    /*-fx-cell-size: 1.66667em;*/
+}
+.list-view
+{
+    -fx-background-color: rgba(233, 0, 210, 0.15), rgba(233, 0, 210, 0);
+    -fx-background-insets: 0, 1;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 8, 0.0 , 0 , 0 );
+}
+.list-view .list-cell
+{
+    -fx-padding: 2 0 2 5;
+    -fx-background-color: rgba(233, 0, 210, 0.15);
+}
+
+.list-view .list-cell:filled:selected, .list-view .list-cell:filled:selected:hover
+{
+    -fx-background: -fx-accent;
+    -fx-background-color: rgba(36, 0, 43, 0.36);
+    -fx-text-fill: -fx-selection-bar-text;
+}
+
+.list-view .list-cell:filled:hover
+{
+    -fx-background-color: rgba(36, 0, 43, 0.15);
+    -fx-text-fill: white;
+}
+TextField {
+    -fx-background-color: rgba(233, 0, 210, 0.2);
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+}

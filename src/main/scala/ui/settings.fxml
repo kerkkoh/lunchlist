@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.net.URL?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.FXCollections?>
+<StackPane fx:id="main" prefWidth="900.0" prefHeight="755.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2"
+           fx:controller="ui.settingsController">
+    <ImageView>
+            <Image url="@background.jpg" preserveRatio="true"/>
+    </ImageView>
+    <GridPane fx:id="grid" hgap="5.0" style="-fx-padding: 20" vgap="10.0">
+        <children>
+            <Button styleClass="btn" onAction="#handleBack" text="&lt; Back" GridPane.columnSpan="2" GridPane.halignment="RIGHT">
+            </Button>
+            <Label fx:id="title" text="&lt; s e t t i n g s &gt;" GridPane.columnSpan="2"
+                   GridPane.halignment="CENTER">
+                <effect>
+                    <DropShadow color="#c82ccd" offsetX="4.0" offsetY="4.0" blurType="GAUSSIAN"/>
+                </effect>
+            </Label>
+            <HBox alignment="CENTER_LEFT" spacing="20.0" GridPane.rowIndex="1" GridPane.columnSpan="2">
+                <Label styleClass="settingsTitle" text="Favorite restaurant: ">
+                    <effect>
+                        <DropShadow color="#c82ccd" offsetX="4.0" offsetY="4.0" blurType="GAUSSIAN"/>
+                    </effect>
+                </Label>
+                <ComboBox fx:id="favRestaurantCombo" styleClass="dropdown" layoutX="15.0" layoutY="33.0" prefWidth="200.0">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+            </HBox>
+
+            <Label styleClass="settingsTitle" text="Highlighted ingredients: " GridPane.rowIndex="2" GridPane.columnSpan="1">
+                <effect>
+                    <DropShadow color="#c82ccd" offsetX="4.0" offsetY="4.0" blurType="GAUSSIAN"/>
+                </effect>
+            </Label>
+            <HBox alignment="CENTER_LEFT" spacing="20.0" GridPane.rowIndex="3" GridPane.columnSpan="2">
+                <ListView fx:id="highlightListView" prefWidth="500.0" prefHeight="100.0">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                        </FXCollections>
+                    </items>
+                </ListView>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="20.0" GridPane.rowIndex="4" GridPane.columnSpan="2">
+                <TextField fx:id="highlightField" prefWidth="200.0"/>
+                <Button onAction="#handleAddHLIngredient" styleClass="btn" text="Add"/>
+                <Button onAction="#handleRemoveHLIngredient" styleClass="btn" text="Remove"/>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="20.0" GridPane.rowIndex="5" GridPane.columnSpan="2">
+                <Label styleClass="settingsTitle" text="Allergy filters: ">
+                    <effect>
+                        <DropShadow color="#c82ccd" offsetX="4.0" offsetY="4.0" blurType="GAUSSIAN"/>
+                    </effect>
+                </Label>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="20.0" GridPane.rowIndex="6" GridPane.columnSpan="2">
+                <Label text="When one of these is enabled, only foods that satisfy this requirement are shown."/>
+            </HBox>
+            <HBox fx:id="dietButtons" alignment="CENTER_LEFT" spacing="20.0" GridPane.rowIndex="7" GridPane.columnSpan="2">
+            </HBox>
+        </children>
+        <columnConstraints>
+            <ColumnConstraints halignment="RIGHT" minWidth="60.0"/>
+            <ColumnConstraints hgrow="ALWAYS" prefWidth="300.0"/>
+        </columnConstraints>
+    </GridPane>
+    <stylesheets>
+        <URL value="@style.css" />
+    </stylesheets>
+</StackPane>

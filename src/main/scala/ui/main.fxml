@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.net.URL?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<StackPane fx:id="main" prefWidth="1000.0" prefHeight="755.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2"
+           fx:controller="ui.mainController">
+    <ImageView>
+            <Image url="@background.jpg" preserveRatio="true"/>
+    </ImageView>
+    <GridPane fx:id="grid" hgap="5.0" style="-fx-padding: 20" vgap="10.0">
+        <children>
+            <Button fx:id="settings" onAction="#handleSettings" text="" GridPane.columnSpan="2" GridPane.halignment="RIGHT">
+            </Button>
+            <Label fx:id="title" text="&lt; l u n c h l i s t &gt;" GridPane.columnSpan="2"
+                   GridPane.halignment="CENTER">
+                <effect>
+                    <DropShadow color="#c82ccd" offsetX="4.0" offsetY="4.0" blurType="GAUSSIAN"/>
+                </effect>
+            </Label>
+            <HBox fx:id="buttons" alignment="CENTER" spacing="20.0" GridPane.rowIndex="1" GridPane.columnSpan="2">
+                <padding>
+                    <Insets left="10.0" right="10.0"/>
+                </padding>
+            </HBox>
+            <HBox fx:id ="listsBox" alignment="CENTER" spacing="5.0" GridPane.rowIndex="2" GridPane.columnSpan="2">
+            </HBox>
+        </children>
+        <columnConstraints>
+            <ColumnConstraints halignment="RIGHT" minWidth="60.0"/>
+            <ColumnConstraints hgrow="ALWAYS" prefWidth="300.0"/>
+        </columnConstraints>
+    </GridPane>
+    <stylesheets>
+        <URL value="@style.css" />
+    </stylesheets>
+</StackPane>
